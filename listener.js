@@ -14,7 +14,7 @@ var lock = new ReadWriteLock();
 
 var CoinbaseExchange = require('coinbase-exchange');
 var authedClient = new CoinbaseExchange.AuthenticatedClient(Env.ACCESS_KEY, Env.SECRET_KEY, Env.PASSPHRASE_KEY, Env.REST_URL);
-var websocket = new CoinbaseExchange.WebsocketClient('BTC-USD', Env.SOCKET_URL);
+var websocket = new CoinbaseExchange.WebsocketClient('BTC-EUR', Env.SOCKET_URL);
 
 
 websocket.on('close', function(data){
@@ -64,7 +64,7 @@ websocket.on('message', function(data) {
             size : closedOrder.size,
             price : (Number(closedOrder.price) + ( 1 * Env.GAP_AMOUNT)).toFixed(2) ,
             side : "sell",
-            product_id : "BTC-USD"
+            product_id : "BTC-EUR"
           };
 
           winston.log("info", JSON.stringify(orderToCreate));
@@ -145,7 +145,7 @@ websocket.on('message', function(data) {
             size : closedOrder.size,
             price : (Number(closedOrder.price) - ( 1 * Env.GAP_AMOUNT)).toFixed(2) ,
             side : "buy",
-            product_id : "BTC-USD"
+            product_id : "BTC-EUR"
           };
 
           winston.log("info", JSON.stringify(orderToCreate));

@@ -4,7 +4,7 @@ var Env = require('./config/env.js');
 var CoinbaseExchange = require('coinbase-exchange');
 
 /*
-var websocket = new CoinbaseExchange.WebsocketClient('BTC-USD', Env.SOCKET_URL);
+var websocket = new CoinbaseExchange.WebsocketClient('BTC-EUR', Env.SOCKET_URL);
 websocket.on('message', function(data) { console.log("message" + data); });
 websocket.on('error', function(data){ console.log("error" + data); });
 websocket.on('open', function(data){

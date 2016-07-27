@@ -6,7 +6,7 @@ var orderSchema = mongoose.Schema({
    size : String,
    price : Number,
    side : String,
-   product_id : {type: String, default: 'BTC-USD'}
+   product_id : {type: String, default: 'BTC-EUR'}
 
 });
 

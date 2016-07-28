@@ -34,4 +34,6 @@ Install
 		coinbase-exchange
 		async
 		mongodb
+		winston
+		gdax
 

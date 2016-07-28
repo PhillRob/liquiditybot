@@ -1,9 +1,9 @@
-Goal
+# Goal
 * Make money off volatility
 * Assumption - Long term trend of bitcoin will be up
   * If this is not the case, then this will not work
 
-Algorithm
+# Algorithm
 * Place Buys/Sells at specified intervals (ever $1 for example)
 * Start by taking $X and placing an equal buy amount (Y BTC) below the current market price at each interval
 * If the price goes lower then it will trigger a buy for that order
@@ -14,7 +14,9 @@ Reset: If the price goes $10 higher than the highest buy price (and no btc is ow
 
 If the price goes below all open orders then there is nothing that can be done and we must wait for the price to come back up.
 
-Docs: https://docs.exchange.coinbase.com/?javascript#orders
+# Docs: 
+* https://docs.exchange.coinbase.com/?javascript#orders
+* https://www.gdax.com/settings/api
 
 
 * Get available balance to use
@@ -28,12 +30,12 @@ Docs: https://docs.exchange.coinbase.com/?javascript#orders
   * If it was a “sell” order that was filled, open a “buy” order for all available USD at price - $1
   * 
   
-Install
-	* get packages
-		* npm
-		* coinbase-exchange
-		* async
-		* mongodb
-		* winston
-		* gdax
+# Install
+* get packages
+  * npm
+  * coinbase-exchange
+  * async
+  * mongodb
+  * winston
+  * gdax
 

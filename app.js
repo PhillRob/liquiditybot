@@ -1,3 +1,4 @@
+// get config details and packages
 var Env = require('./config/env.js');
 var CoinbaseExchange = require('coinbase-exchange');
 var async = require('async');
@@ -9,8 +10,8 @@ var Order = require('./models/order.js');
 var winston = require('winston');
 winston.add(winston.transports.File, { filename: 'app.log' });
 
-winston.log('info', "Getting available balance.");
-var publicClient = new CoinbaseExchange.PublicClient('BTC-EUR');
+winston.log('info', "Getting available balance."); // this gets the avail. amount from the env.js file not the amount avail in GDAX account
+var publicClient = new CoinbaseExchange.PublicClient('BTC-EUR'); // modify currency if required
 var authedClient = new CoinbaseExchange.AuthenticatedClient(Env.ACCESS_KEY, Env.SECRET_KEY, Env.PASSPHRASE_KEY, Env.REST_URL);
 if(Env.DELETE_PREVIOUS){
   // Clear all orders
@@ -59,12 +60,9 @@ function createBids(){
 
           var orderPrice = startPrice - ( i * Env.GAP_AMOUNT) ;
           var size = amountPerOrder / orderPrice ;
-          winston.log('info', "size EUR" + size); 
-	  winston.log('info', "order Price EUR" + orderPrice);
-	winston.log('info', "Price EUR" + (size/orderPrice));		
           var orderToCreate = {
-            size : "" + size.toFixed(2),
-            price : "" + orderPrice.toFixed(2),
+            size : "" + size.toFixed(8),
+            price : "" + orderPrice.toFixed(8),
             side : "buy",
             product_id : "BTC-EUR"
           };

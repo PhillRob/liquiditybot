@@ -29,9 +29,9 @@ Docs: https://docs.exchange.coinbase.com/?javascript#orders
   * 
   
 Install
-get packages
-npm
-coinbase-exchange
-async
-mongodb
+	get packages
+		npm
+		coinbase-exchange
+		async
+		mongodb
 

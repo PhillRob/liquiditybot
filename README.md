@@ -26,3 +26,12 @@ Docs: https://docs.exchange.coinbase.com/?javascript#orders
 * For any “Done” orders
   * If it was a “buy” order that was filled, open a “sell” order for BTC fill amount at price + $1
   * If it was a “sell” order that was filled, open a “buy” order for all available USD at price - $1
+  * 
+  
+Install
+get packages
+npm
+coinbase-exchange
+async
+mongodb
+

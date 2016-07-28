@@ -172,14 +172,14 @@ websocket.on('message', function(data) {
                   Order(orderToCreate).save(function(error){
 
                     if(error){
-                      winston.log('error', "Failed to create order" + orderToCreate.id + " with errro " + error);
+                      winston.log('error', "Failed to create order" + orderToCreate.id + " with error " + error);
                       writeRelease();
                       return;
                     }
 
                     closedOrder.remove(function(error){
                       if(error){
-                        winston.log('error', "Failed to remove order" + closedOrder.id + " with errro " + error);
+                        winston.log('error', "Failed to remove order" + closedOrder.id + " with error " + error);
                         writeRelease();
                         return;
                       }
@@ -199,14 +199,14 @@ websocket.on('message', function(data) {
             Order(orderToCreate).save(function(error){
 
               if(error){
-                winston.log('error', "Failed to create order" + orderToCreate.id + " with errro " + error);
+                winston.log('error', "Failed to create order" + orderToCreate.id + " with error " + error);
                 writeRelease();
                 return;
               }
 
               closedOrder.remove(function(error){
                 if(error){
-                  winston.log('error', "Failed to remove order" + closedOrder.id + " with errro " + error);
+                  winston.log('error', "Failed to remove order" + closedOrder.id + " with error " + error);
                   writeRelease();
                   return;
                 }

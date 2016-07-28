@@ -32,10 +32,11 @@ If the price goes below all open orders then there is nothing that can be done a
   
 # Install
 * get npm packages
-  $ npm install winston
-  * coinbase-exchange
-  * async
-  * mongodb
-  * winston
-  * gdax
-
+```
+  npm install winston
+  npm install coinbase-exchange
+  npm install async
+  npm install mongodb
+  npm install winston
+  npm install gdax
+```

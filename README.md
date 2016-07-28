@@ -29,11 +29,11 @@ Docs: https://docs.exchange.coinbase.com/?javascript#orders
   * 
   
 Install
-	get packages
-		npm
-		coinbase-exchange
-		async
-		mongodb
-		winston
-		gdax
+	* get packages
+		* npm
+		* coinbase-exchange
+		* async
+		* mongodb
+		* winston
+		* gdax
 

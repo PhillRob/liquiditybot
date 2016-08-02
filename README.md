@@ -21,11 +21,11 @@ If the price goes below all open orders then there is nothing that can be done a
 # Install
 * get npm packages
 ```
-  git clone https://github.com/PhillRob/liquiditybot
-  npm install winston
-  npm install coinbase-exchange
-  npm install async
-  npm install mongodb
-  npm install winston
-  npm install gdax
+  $ git clone https://github.com/pooleja/liquiditybot
+  $ npm install winston
+  $ npm install coinbase-exchange
+  $ npm install async
+  $ npm install mongodb
+  $ npm install winston
+  $ npm install gdax
 ```
